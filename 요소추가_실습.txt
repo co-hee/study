@@ -1,0 +1,109 @@
+ê°„ë‹¨?˜ê²Œ ?ê°?˜ë©´ li ?œê·¸ë¡?ë§Œë“  ?”ì†Œ ?¸ë“œë¥?ê¾¸ë©°?? toDoList??ë§ˆì?ë§??ì‹ ?”ì†Œë¡?ì¶”ê??˜ëŠ” ê³¼ì œ?…ë‹ˆ??
+
+ê·¸ëŸ¼ ì²œì²œ???¨ê³„ë³„ë¡œ ì½”ë“œë¥??‘ì„±??ë´…ì‹œ??
+
+ê°€??ë¨¼ì? li ?œê·¸ë¥?ë§Œë“¤?´ì•¼ ?˜ë‹ˆê¹? document ê°ì²´??createElement ë©”ì†Œ?œë? ?œìš©?´ì„œ ?Œë¼ë¯¸í„°??ë¬¸ì?´ë¡œ lië¥??„ë‹¬?˜ë©´ ?˜ê² ì£?
+
+function addNewTodo(text) {
+  const li = document.createElement("li");
+}
+ê·??¤ìŒ?€ ?Œë¼ë¯¸í„°ë¡??„ë‹¬ë°›ì? textë¥?li ?œê·¸ ?ˆì— ?£ì–´ì£¼ëŠ” ê±´ë°??
+?´ê±´ innerHTML?´ë‚˜ textContent?„ë¡œ?¼í‹°??text ê°’ì„ ? ë‹¹??ì£¼ë©´ ê°„ë‹¨?˜ê²Œ ?´ê²°?????ˆìŠµ?ˆë‹¤.
+?´ë–¤ ?„ë¡œ?¼í‹°ë¥??œìš©?´ë„ ?ê??†ì?ë§? ë³´í†µ ?´ëŸ° ???¼ë“¤?€ ?¼ë°˜ ?ìŠ¤?¸ê? ?„ë‹¬?˜ë‹ˆê¹?textContent ?„ë¡œ?¼í‹°ë¥??¬ìš©?´ì„œ ì½”ë“œë¥??‘ì„±?´ë³´ë©??¤ìŒê³?ê°™ì´ ?‘ì„±?????ˆìŠµ?ˆë‹¤.
+
+function addNewTodo(text) {
+  const li = document.createElement("li");
+  li.textContent = text;
+}
+ê·¸ë¦¬ê³?ë§ˆì?ë§‰ìœ¼ë¡œëŠ” ??li?œê·¸ë¥?toDoList??ì¶”ê??˜ë©´ ?©ë‹ˆ??
+ë¬¸ì œ?ì„œ??toDoList??ë§ˆì?ë§??ì‹ ?”ì†Œë¡?ì¶”ê??˜ë¼ê³??ˆìœ¼?? append ë©”ì†Œ?œë? ?¬ìš©?´ì„œ ì½”ë“œë¥??‘ì„±??ë³´ë©´ ?„ë˜?€ ê°™ì´ ?‘ì„±?????ˆìŠµ?ˆë‹¤.
+
+ëª¨ë²” ?µì•ˆ
+const toDoList = document.querySelector('#to-do-list');
+
+function addNewTodo(text) {
+  const li = document.createElement("li");
+  li.textContent = text;
+  toDoList.append(li);
+}
+
+// ?ŒìŠ¤??ì½”ë“œ
+addNewTodo('?ë°”?¤í¬ë¦½íŠ¸ ê³µë??˜ê¸°');
+addNewTodo('ê³ ì–‘???”ì¥??ì²?†Œ?˜ê¸°');
+addNewTodo('ê³ ì–‘???¥ë‚œê°??¼í•‘?˜ê¸°');
+
+
+// HTML ?ì„± (HTML attribute)
+const tomorrow = document.querySelector('#tomorrow');
+const item = tomorrow.firstElementChild;
+const link = item.firstElementChild;
+
+// elem.getAttribute('?ì„±'): ?ì„±???‘ê·¼?˜ê¸°
+console.log(tomorrow.getAttribute('href'));
+console.log(item.getAttribute('class'));
+
+// elem.setAttribute('?ì„±', 'ê°?): ?ì„± ì¶”ê?(?˜ì •)?˜ê¸°
+tomorrow.setAttribute('class', 'list'); // ì¶”ê?
+link.setAttribute('href', 'https://www.codeit.kr'); // ?˜ì •
+
+// elem.removeAttribute('?ì„±'): ?ì„± ?œê±°?˜ê¸°
+tomorrow.removeAttribute('href'); 
+tomorrow.removeAttribute('class'); 
+
+// id ?ì„±
+console.log(tomorrow);
+console.log(tomorrow.id);
+
+// class ?ì„±
+console.log(item);
+console.log(item.className);
+
+// href ?ì„±
+console.log(link);
+console.log(link.href);
+console.log(tomorrow.href);
+
+document.querySelector('css? íƒ??)??css ? íƒ?ë¡œ HTML ?œê·¸ë¥?? íƒ?˜ëŠ” ë©”ì†Œ?œì…?ˆë‹¤.
+element.firstElementChild??element??? íƒ???œê·¸??ì²?ë²ˆì§¸ ?ì‹ ?”ì†Œ ?¸ë“œë¥?? íƒ?˜ëŠ” ?„ë¡œ?¼í‹°?…ë‹ˆ??
+document.createElement('?œê·¸?´ë¦„')???Œë¼ë¯¸í„°ë¡??„ë‹¬ë°›ì? ?œê·¸ ?´ë¦„???”ì†Œ ?¸ë“œë¥??ì„±?´ì£¼??ë©”ì†Œ?œì…?ˆë‹¤.
+element.setAttribute('?ì„±', 'ê°?)??element??? íƒ???œê·¸???ì„±??ê°’ì„ ì¶”ê??˜ê±°???˜ì •?˜ëŠ” ë©”ì†Œ?œì…?ˆë‹¤.
+element.textContent??element??? íƒ???œê·¸ ?´ë????ìŠ¤???•ë³´ë§?ë¬¸ì?´ë¡œ ê°€?¸ì˜¤???„ë¡œ?¼í‹°?…ë‹ˆ??
+element.innerHTML?€ element??? íƒ???œê·¸ ?´ë???HTML ?•ë³´ë¥?ë¬¸ì?´ë¡œ ê°€?¸ì˜¤???„ë¡œ?¼í‹°?…ë‹ˆ??
+element.outerHTML?€ element??? íƒ???œê·¸ ?ì²´??HTML ?•ë³´ë¥?ë¬¸ì?´ë¡œ ê°€?¸ì˜¤???„ë¡œ?¼í‹°?…ë‹ˆ??
+
+// ?¤í????¤ë£¨ê¸?
+const today = document.querySelector('#today');
+const tomorrow = document.querySelector('#tomorrow');
+
+// elem.classList: add, remove, toggle
+const item = tomorrow.children[1];
+item.classList.add('done', 'add');
+item.classList.remove('done', 'add');
+item.classList.toggle('done', true); // ì¶”ê?
+item.classList.toggle('done', flase); // ?? œ
+
+// elem.className
+today.children[1].className = 'done';
+
+// style ?„ë¡œ?¼í‹°
+today.children[0].style.textDecoration = 'line-through';
+today.children[0].style.backgroundColor = '#DDDDDD';
+today.children[2].style.textDecoration = 'line-through';
+today.children[2].style.backgroundColor = '#DDDDDD';
+
+¿ä¼Ò ³ëµå ¸¸µé±â: document.createElement('ÅÂ±×ÀÌ¸§')
+¿ä¼Ò ³ëµå ²Ù¹Ì±â: element.textContent, element.innerHTML, ...
+¿ä¼Ò ³ëµå Ãß°¡ È¤Àº ÀÌµ¿ÇÏ±â: element.prepend, element.append, element.after, element.before
+¿ä¼Ò ³ëµå »èÁ¦ÇÏ±â: element.remove()
+7. HTML ¼Ó¼º ´Ù·ç±â
+´ëºÎºĞÀÇ HTML ¼Ó¼ºÀº DOM °´Ã¼ÀÇ ÇÁ·ÎÆÛÆ¼·Î º¯È¯ÀÌ µË´Ï´Ù.
+ÇÏÁö¸¸, Ç¥ÁØ ¼Ó¼ºÀÌ ¾Æ´Ñ °æ¿ì¿¡´Â ÇÁ·ÎÆÛÆ¼·Î º¯È¯ÀÌ ¾È µÇ´Âµ¥¿ä. ¾Æ·¡ ¸Ş¼Òµå¸¦ È°¿ëÇÏ¸é Ç¥ÁØÀÌ ¾Æ´Ñ HTML ¼Ó¼ºµéµµ ´Ù·ê ¼ö ÀÖ½À´Ï´Ù.
+
+¼Ó¼º¿¡ Á¢±ÙÇÏ±â: element.getAttribute('¼Ó¼º')
+¼Ó¼º Ãß°¡(¼öÁ¤)ÇÏ±â: element.setAttribute('¼Ó¼º', '°ª')
+¼Ó¼º Á¦°ÅÇÏ±â: element.removeAttribute('¼Ó¼º')
+8. ½ºÅ¸ÀÏ ´Ù·ç±â
+ÀÚ¹Ù½ºÅ©¸³Æ®·Î ÅÂ±×ÀÇ ½ºÅ¸ÀÏÀ» ´Ù·ç´Â ¹æ¹ı¿¡´Â Å©°Ô µÎ °¡Áö°¡ ÀÖ½À´Ï´Ù.
+
+style ÇÁ·ÎÆÛÆ¼ È°¿ëÇÏ±â: element.style.styleName = 'value';
+class º¯°æÀ» ÅëÇØ °£Á¢ÀûÀ¸·Î ½ºÅ¸ÀÏ Àû¿ëÇÏ±â: element.className, element.classList
